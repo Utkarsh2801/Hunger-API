@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "5ef55c9d0e6335271a9869c4",
+    "name": "Chinese",
+    "description": "Tasty and delicious",
+    "image": "https://sukhis.com/wp-content/uploads/2020/01/Dosa.jpg"
+  },
+  {
+    "_id": "5ef55cc20e6335271a9869c5",
+    "name": "South Indian",
+    "description": "Masale ka tadka",
+    "image": "https://sukhis.com/wp-content/uploads/2020/01/Dosa.jpg"
+  },
+  {
+    "_id": "5ef55cc20e6335271a9869c6",
+    "name": "Sweets",
+    "description": "Love for food",
+    "image": "https://sukhis.com/wp-content/uploads/2020/01/Dosa.jpg"
+  }
+]

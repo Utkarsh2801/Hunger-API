@@ -1,0 +1,29 @@
+[
+  {
+    "_id": "5ef7428567586732906d4335",
+    "name": "Rasgulla",
+    "price": 50,
+    "description": "The best sweet of the word",
+    "category": "5ef55cc20e6335271a9869c6",
+    "foodType": "Veg",
+    "image": "https://c.ndtvimg.com/2019-12/rt2n8olg_rasgulla_625x300_04_December_19.jpg"
+  },
+  {
+    "_id": "5ef7428567586732906d4337",
+    "name": "Chinese Noodles",
+    "price": 50,
+    "description": "Chow Chow",
+    "category": "5ef55c9d0e6335271a9869c4",
+    "foodType": "Veg",
+    "image": "https://www.loveandoliveoil.com/wp-content/uploads/2015/03/soy-sauce-noodlesH2.jpg"
+  },
+  {
+    "_id": "5ef7428567586732906d4336",
+    "name": "Masala Dosa",
+    "price": 50,
+    "description": "Mast Masala",
+    "category": "5ef55cc20e6335271a9869c5",
+    "foodType": "Veg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSRKakonjdXPD06UpXtdukOX7y1EkMSj09I3A&usqp=CAU"
+  }
+]

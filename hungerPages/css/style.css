@@ -1,0 +1,996 @@
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Piedra&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+/* Styles for category Page  */
+
+.container {
+  margin: 0 auto;
+  position: relative;
+}
+
+.nav-container {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+}
+
+.navigation {
+  display: flex;
+  padding: 1rem 2rem;
+  background: #2475b0;
+}
+
+.navigation ul {
+  flex: 1;
+}
+
+.nav-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logo li a,
+.nav-btn li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.logo li {
+  font-family: "Piedra", cursive;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.nav-btn li {
+  padding: 0.5rem 1rem;
+  font-family: "Pangolin", cursive;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.hero {
+  max-width: 100%;
+  height: 500px;
+  background: url("../images/pizza.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-data {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pin {
+  position: relative;
+  top: 100px;
+}
+
+.pin .pincode {
+  border: none;
+  outline: none;
+  width: 600px;
+  padding: 1rem 0.5rem;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  border-radius: 10px;
+}
+
+.pin-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background: #2475b0;
+  outline: none;
+  border: none;
+  border-top-right-radius: 10px;
+}
+
+.pin-btn i {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.category-heading {
+  font-family: "Pangolin", cursive;
+}
+
+.category-heading h1 {
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2rem 0;
+  font-size: 3rem;
+  color: #192a56;
+}
+
+.category-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+.row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.category {
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  border-top-right-radius: 20px;
+}
+
+.category::after {
+  content: "";
+  position: absolute;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.category img {
+  height: 100%;
+  transition: 0.5s;
+  z-index: -2;
+}
+
+.category:hover::after {
+  height: 100%;
+}
+
+.category:hover img {
+  transform: scale(1.2);
+}
+
+.cate-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: #192a56;
+  z-index: 5;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cate-name h3 {
+  width: 100%;
+  text-align: center;
+  height: 50px;
+  line-height: 40px;
+  color: #ffffff;
+  font-family: "Pangolin", cursive;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+}
+
+.category:hover .cate-name {
+  bottom: 100px;
+}
+
+footer {
+  background: #2475b0;
+  color: #ffffff;
+}
+
+footer h2 {
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/* Media queries for category page */
+
+@media screen and (max-width: 450px) {
+  .navigation {
+    padding: 1rem;
+  }
+  .nav-btn {
+    justify-content: flex-end;
+  }
+
+  .nav-btn li {
+    font-size: 1rem;
+    margin-top: 0.8rem;
+    padding: 0 0.8rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  .pin .pincode {
+    width: 300px;
+    padding: 1rem 0.5rem;
+    font-size: 0.8rem;
+    padding-left: 1rem;
+  }
+
+  .pin-btn i {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: #ffffff;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .category-container {
+    max-width: 900px;
+  }
+
+  .category {
+    height: 250px;
+    border-top-right-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .category-container {
+    max-width: 500px;
+  }
+  .row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .category-container {
+    max-width: 300px;
+  }
+  .row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
+
+  .category-heading h1 {
+    width: 200px;
+    font-size: 2rem;
+  }
+
+  footer h2 {
+    font-size: 1rem;
+  }
+}
+
+/* Styling fro login page */
+
+.auth-container {
+  height: calc(100vh - 60px);
+  position: relative;
+}
+
+.img-back {
+  height: 70%;
+  background: url("../images/salad.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.img-back::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.auth-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  overflow: hidden;
+  height: 400px;
+  width: 400px;
+  background: #ffffff;
+  border-top-right-radius: 20px;
+  -webkit-box-shadow: 6px 7px 18px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 7px 18px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 7px 18px 0px rgba(0, 0, 0, 0.75);
+  position: relative;
+  top: 50px;
+}
+
+.login h3 {
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px 0;
+  padding-bottom: 5px;
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  font-family: "Permanent Marker", cursive;
+  color: #2475b0;
+}
+
+.login-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}
+
+.login-box form {
+  width: 100%;
+}
+
+.login-box form .input {
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.login-box form .input input {
+  width: 100%;
+  padding: 1rem 1rem;
+  padding-bottom: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #192a56;
+  color: #192a56;
+}
+
+.login-box form .input input[type="submit"] {
+  width: 120px;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  background: #192a56;
+  color: #ffffff;
+}
+
+.login-box form .input input::placeholder {
+  color: #2475b0;
+}
+
+@media screen and (max-width: 400px) {
+  .auth-container {
+    height: 125vh;
+  }
+  .login {
+    height: 400px;
+    width: 300px;
+  }
+}
+
+/* Styles for signup page */
+.signup {
+  overflow: hidden;
+  height: 500px;
+  width: 400px;
+  background: #ffffff;
+  border-top-right-radius: 20px;
+  -webkit-box-shadow: 6px 7px 18px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 7px 18px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 7px 18px 0px rgba(0, 0, 0, 0.75);
+  position: relative;
+  top: 50px;
+}
+
+.signup h3 {
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px 0;
+  padding-bottom: 5px;
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  font-family: "Permanent Marker", cursive;
+  color: #2475b0;
+}
+
+.signup-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-box form {
+  width: 100%;
+}
+
+.signup-box form .input {
+  width: 100%;
+  padding: 0.5rem 2rem;
+}
+
+.signup-box form .input input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  padding-bottom: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #192a56;
+  color: #192a56;
+}
+
+.signup-box form .input input[type="submit"] {
+  width: 120px;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  background: #192a56;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.signup-box form .input input::placeholder {
+  color: #2475b0;
+}
+
+.reg-message,
+.forgot-message {
+  width: 100%;
+  padding-left: 2rem;
+  margin: 0 auto;
+  color: #192a56;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.reg-message a,
+.forgot-message a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #2475b0;
+  letter-spacing: 1.5px;
+}
+
+.forgot-message {
+  text-align: right;
+  padding-right: 2rem;
+  margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 400px) {
+  .signup {
+    height: 500px;
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  .auth-container {
+    height: 200vh;
+  }
+}
+
+/* Styles for dish listing page */
+
+.dishlisting-container {
+  min-height: calc(100vh - 60px);
+  padding-top: 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.side-nav {
+  width: 200px;
+  height: 500px;
+  margin-top: 1.2rem;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: rgb(80, 190, 216, 0.4);
+}
+
+.side-nav h3 {
+  padding: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Pangolin", cursive;
+  color: #192a56;
+}
+
+.radio {
+  position: relative;
+  padding: 5px;
+}
+
+.radio input {
+  position: absolute;
+  left: 10px;
+  top: 7px;
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  border: 2px solid #2475b0;
+}
+
+.filter-title {
+  padding: 20px 0 5px 10px;
+  font-family: "Krona One", sans-serif;
+}
+
+.radio input:checked {
+  background: #ae1438;
+}
+
+.radio label {
+  padding-left: 30px;
+  font-weight: bold;
+}
+.dishes {
+  flex: 5;
+  padding: 1rem 1rem;
+}
+
+.search {
+  position: relative;
+}
+
+.search input[type="text"] {
+  width: 100%;
+  padding: 0.8rem 2rem;
+  padding-left: 60px;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  background: #50bdd8;
+  color: #ffffff;
+}
+
+.search input[type="text"]::placeholder {
+  color: #ffffff;
+}
+
+.icon {
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 8px 11px;
+  font-size: 1.3rem;
+  border-radius: 100%;
+  outline: none;
+  border: none;
+  background: #1e7d91;
+  color: #ffffff;
+}
+
+.dish-list {
+  padding: 50px 0px 30px 0;
+}
+
+.dish-item {
+  min-height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  -webkit-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  margin-bottom: 1.5rem;
+}
+
+.dish-image {
+  max-height: 210px;
+  width: 200px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.dish-image img {
+  width: 100%;
+}
+
+.dish-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.dish-detail {
+  padding: 1rem;
+}
+
+.dish-detail p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.dish-detail .dish-title {
+  font-family: "Krona One", sans-serif;
+}
+
+.dish-description {
+  margin-top: 10px;
+}
+
+.rating span {
+  font-weight: bold;
+}
+
+.rating .fa-star {
+  color: #f3b431;
+}
+
+.price {
+  font-size: 1.2rem !important;
+  padding: 3px 0;
+  font-weight: bold;
+}
+
+.buttons {
+  margin-top: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons button,
+.remove,
+.place-order {
+  padding: 5px 15px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  background: #ae1438;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+
+.apply-filters {
+  display: none;
+}
+
+.review-model-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.review-model {
+  width: 80%;
+  height: 500px;
+  overflow: scroll;
+  background: #ffffff;
+  padding: 1rem 1rem;
+  z-index: 200;
+}
+
+.add-review {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.add-review textarea {
+  width: 100%;
+  outline: none;
+  border: none;
+  border: 1px solid #1e7d91;
+  padding: 10px 20px;
+  color: #1e7d91;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+.add-review textarea::placeholder {
+  color: #1e7d91;
+}
+
+.add-review-button {
+  padding: 5px 15px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  background: #ae1438;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+
+.add-review-button:hover {
+  background: #e84342;
+}
+
+.rating {
+  display: block;
+  margin: 5px 0;
+  width: 100px;
+  border: 1px solid #1e7d91;
+  padding: 4px 0;
+  padding-left: 5px;
+  color: #1e7d91;
+  outline: none;
+  font-weight: bold;
+}
+
+.rating::placeholder {
+  color: #1e7d91;
+}
+
+.reviews {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.review-item {
+  margin-top: 20px;
+  display: flex;
+  position: relative;
+  height: 150px;
+  -webkit-box-shadow: 6px 7px 18px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 7px 18px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 7px 18px 0px rgba(0, 0, 0, 0.75);
+  padding: 10px 5px;
+  overflow: hidden;
+}
+
+.reviewer {
+  width: 100px;
+}
+
+.reviewer .reviewer-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.reviewer .reviewer-img img {
+  width: 100%;
+}
+
+.review-details {
+  flex: 1;
+  max-width: 750px;
+}
+
+.reviewer-details h4 {
+  font-size: 1.2rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.reviewer-details .rating {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.main-review {
+  height: 60px;
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.main-review::-webkit-scrollbar {
+  display: none;
+}
+
+.delete-review {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  background: #2475b0;
+  color: #ffffff;
+  padding: 8px 10px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-review:hover {
+  background: #8fbec8;
+}
+
+@media screen and (max-width: 600px) {
+  .dishlisting-container {
+    display: block;
+  }
+  .side-nav {
+    position: sticky;
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    margin-top: 0;
+    padding: 0 20px;
+    z-index: 1;
+    background: #ffffff;
+    padding-top: 80px;
+    top: 0vh;
+    display: none;
+  }
+
+  .filter {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .radio input {
+    left: 0px;
+  }
+
+  .filter-title {
+    padding: 0;
+  }
+
+  .radio label {
+    padding-left: 20px;
+    font-weight: bold;
+  }
+
+  .apply-filters {
+    width: 90%;
+    border-radius: 25px;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 0;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    background: #ae1438;
+    color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  .review-model-container {
+    height: 200vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .dish-item {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .dish-image {
+    width: 100%;
+    max-height: none;
+    height: 350px;
+  }
+
+  .review-model {
+    width: 95%;
+  }
+
+  .reviews {
+    width: 100%;
+  }
+
+  .review-item {
+    height: 200px;
+  }
+
+  .main-review {
+    height: 100px;
+    overflow: scroll;
+  }
+
+  .add-review {
+    width: 95%;
+  }
+
+  .reviewer {
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .review-model {
+    height: 400px;
+  }
+}
+
+/* Styling for cart page */
+
+.cart-head {
+  width: 100%;
+  /* padding: 0px; */
+  font-size: 2.5rem;
+  position: relative;
+  bottom: 30px;
+  text-align: center;
+  font-family: "Pangolin", cursive;
+}
+
+.quantity {
+  display: block;
+  margin: 5px 0;
+  width: 100px;
+  border: 1px solid #1e7d91;
+  padding: 4px 0;
+  padding-left: 5px;
+  color: #1e7d91;
+  outline: none;
+  font-weight: bold;
+}
+
+.quantity::placeholder {
+  color: #1e7d91;
+}
+
+.total {
+  padding: 25px 50px;
+  text-align: right;
+}
+
+.place-order {
+  margin-top: 30px;
+  font-size: 2rem;
+  border-radius: 10px;
+}
+
+.total p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+}

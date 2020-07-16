@@ -1,0 +1,26 @@
+[
+  {
+    "comment": "good food",
+    "user": "5ef5e7e7f3c50c4464379232",
+    "dish": "5ef7428567586732906d4335",
+    "rating": 8
+  },
+  {
+    "comment": "Great food",
+    "user": "5ef74012e5c04033a068a023",
+    "dish": "5ef7428567586732906d4335",
+    "rating": 7
+  },
+  {
+    "comment": "very good food",
+    "user": "5ef74012e5c04033a068a023",
+    "dish": "5ef7428567586732906d4337",
+    "rating": 8
+  },
+  {
+    "comment": "god! very good food",
+    "user": "5ef74012e5c04033a068a023",
+    "dish": "5ef7428567586732906d4336",
+    "rating": 8
+  }
+]

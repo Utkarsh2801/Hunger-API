@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "5ef5e7e7f3c50c4464379232",
+    "phone": "9140602387",
+    "role": "admin",
+    "firstName": "Ut",
+    "lastName": "Tripathi",
+    "email": "mails.utkarsh28@gmail.com",
+    "password": "123456"
+  },
+  {
+    "_id": "5ef74012e5c04033a068a023",
+    "role": "user",
+    "firstName": "Adarsh",
+    "lastName": "Tripathi",
+    "email": "mails.adarsh28@gmail.com",
+    "phone": "9140602589",
+    "password": "123456"
+  },
+  {
+    "_id": "5ef74023e5c04033a068a024",
+    "role": "user",
+    "firstName": "Ritesh",
+    "lastName": "Tripathi",
+    "email": "mails.ritesh28@gmail.com",
+    "phone": "9140602580",
+    "password": "123456"
+  },
+  {
+    "_id": "5ef74056e5c04033a068a026",
+    "role": "user",
+    "firstName": "shivani",
+    "lastName": "gupta",
+    "email": "mails.shivani28@gmail.com",
+    "phone": "9140602570",
+    "password": "123456"
+  }
+]
